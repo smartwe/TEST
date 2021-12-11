@@ -1,27 +1,24 @@
 {
-  "name": "electron",
-  "version": "1.0.0",
+  "name": "test",
+  "version": "0.1",
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "build:osx": "electron-builder --mac",
-    "build:linux": "npm run build:linux32 && npm run build:linux64",
-    "build:linux32": "electron-builder --linux --ia32",
-    "build:linux64": "electron-builder --linux --x64",
-    "build:win": "npm run build:win32 && npm run build:win64",
-    "build:win32": "electron-builder --win portable --ia32",
-    "build:win64": "electron-builder --win portable --x64"
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
   },
-  "author": "smartwee",
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "electron": "^16.0.4",
     "electron-builder": "^22.14.5"
   },
   "dependencies": {
-    "electron-log": "^4.4.1",
     "electron-updater": "^4.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smartwe/TEST.git"
   }
 }
